@@ -1,0 +1,15 @@
+.reserved
+{
+	background-color: #FFCCCC;
+}
+
+.free
+{
+	background-color: #99FFB0;
+}
+
+.verdict-box
+{
+	text-align: center;
+	margin:     5px;
+}

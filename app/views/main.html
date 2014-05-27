@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Reserved Words Checker</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="col-md-offset-4 col-md-4">
+    <select ng-model="data.section" ng-options="s for s in data.sections" ng-change="check()" class="form-control"></select>
+    <input ng-model="data.word" ng-change="check()" type="text" class="form-control" placeholder="Input word" ng-class="{'reserved':(data.isReserved===true),'free':(data.word && data.isReserved===false)}"/>
+    <div class="verdict-box">
+      <div ng-show="data.isReserved===true" class="label label-danger">Reserved</div>
+      <div ng-show="data.word && data.isReserved===false" class="label label-success">Free</div>
+    </div>
+  </div>
+</div>
