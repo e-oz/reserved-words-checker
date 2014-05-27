@@ -14,6 +14,6 @@ angular.module('reservedWordsCheckerApp')
       if (!$scope.data.word) {
         return false;
       }
-      $scope.data.isReserved = !(words[$scope.data.section].indexOf($scope.data.word) < 0);
+      $scope.data.isReserved = !(words[$scope.data.section].indexOf($scope.data.word.toUpperCase()) < 0);
     };
   });
